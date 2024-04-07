@@ -147,7 +147,7 @@ export class CopybaraAction {
 
     // Upload Copybara config as an artifact
     if (core.isDebug()) {
-      const artifactClient = new artifact.ArtifactClient();
+      const artifactClient = artifact.create();
       artifactClient.uploadArtifact("copy.bara.sky", [hostConfig.cbConfigPath], homedir());
     }
   }
